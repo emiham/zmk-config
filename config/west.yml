@@ -12,5 +12,6 @@ manifest:
     - name: zmk-locales
       remote: joelspadin
       revision: main
+      import: include/locale/keys_se.h
   self:
     path: config
