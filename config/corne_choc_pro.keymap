@@ -35,8 +35,8 @@
       bindings = <
         &trans  &trans  &kp N1  &kp N2  &kp N3  &kp PLUS     &kp PSCRN    &kp C_VOL_DN      &kp C_VOL_UP  &trans     &trans  &kp QUESTION
         &trans  &trans  &kp N4  &kp N5  &kp N6  &kp N0       &kp LEFT     &kp DOWN          &kp UP        &kp RIGHT  &trans  &kp APOS
-        &trans  &trans  &kp N7  &kp N8  &kp N9  &kp MINUS    &kp HOME     &kp PG_DN         &kp PG_UP     &kp COLON  &trans  &trans
-                                &trans  &trans  &trans       &kp BSPC     &trans            &trans
+        &trans  &trans  &kp N7  &kp N8  &kp N9  &kp MINUS    &none        &none             &COMMA        &kp DOT    &trans  &trans
+                                &trans  &trans  &trans       &kp BSPC     &mo 4             &trans
       >;
     };
 
@@ -63,12 +63,12 @@
     };
 
     extra_layer_1 {
-      display-name = "EXTRA 1";
+      display-name = "EXTRA";
       bindings = <
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans                                                  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp END    &kp HOME   &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PG_DN  &kp PG_UP  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans
+        &trans  &trans  &trans                                                        &trans  &trans  &trans
       >;
     };
 
