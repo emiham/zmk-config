@@ -9,7 +9,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
 #include <locale/keys_se.h>
-#define SE_A_UMLAUT_2 (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_LEFT_BRACKET_AND_BRACE))
+#define SE_A_UMLAUT_B (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_LEFT_BRACKET_AND_BRACE))
 
 / {
   chosen { zmk,physical-layout = &default_layout; };
@@ -24,7 +24,7 @@
 
       bindings = <
         &kp TAB    &kp Q  &kp W  &kp E      &kp R  &kp T        &kp Y    &kp U  &kp I      &kp O      &kp P          &kp SE_A_RING
-        &kp LSHFT  &kp A  &kp S  &kp D      &kp F  &kp G        &kp H    &kp J  &kp K      &kp L      &kp SE_O_RING  &kp SE_A_UMLAUT_2
+        &kp LSHFT  &kp A  &kp S  &kp D      &kp F  &kp G        &kp H    &kp J  &kp K      &kp L      &kp SE_O_RING  &kp SE_A_UMLAUT_B
         &kp LCTRL  &kp Z  &kp X  &kp C      &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT    &kp SE_MINUS   &kp ESC
                                  &kp LGUI   &mo 1  &kp SPACE    &kp RET  &mo 2  &kp LALT
       >;
