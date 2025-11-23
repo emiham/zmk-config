@@ -46,9 +46,9 @@
 
       /* TODO Backslash doesn´t exist in zmk-locales */
       bindings = <
-        &trans  &trans    &kp SE_DQT  &kp SE_LT     &kp SE_GT     &kp SE_PIPE   &kp SE_CARET  &kp SE_LBRC      &kp SE_RBRC   &kp SE_DLLR  &kp SE_QMARK   &kp SE_QMARK
-        &trans  &trans    &kp SE_EXCL &kp SE_LBKT   &kp ST_RBKT   &kp SE_AMPS   &kp SE_FSLH   &kp SE_LPAR      &kp SE_RPAR   &kp SE_BSLH  &kp SE_BSLH    &kp SE_APOS
-        &trans  &trans    &kp SE_HASH &kp SE_QMARK  &kp SE_EQUAL  &kp SE_PRCNT  &kp SE_TILDE  &kp SE_AT_SIGN   &kp COMMA     &kp DOT      &kp SE_MINUS   &trans
+        &trans  &trans    &kp SE_DQT  &kp SE_LT     &kp SE_GT     &kp SE_PIPE   &kp SE_CARET  &kp SE_LBRC      &kp SE_RBRC   &kp SE_DLLR  &kp SE_QMARK    &kp SE_QMARK
+        &trans  &trans    &kp SE_EXCL &kp SE_LBKT   &kp ST_RBKT   &kp SE_AMPS   &kp SE_FSLH   &kp SE_LPAR      &kp SE_RPAR   &none        &none           &kp SE_APOS
+        &trans  &trans    &kp SE_HASH &kp SE_QMARK  &kp SE_EQUAL  &kp SE_PRCNT  &kp SE_TILDE  &kp SE_AT_SIGN   &kp COMMA     &kp DOT      &kp SE_MINUS    &trans
                                       &trans        &trans        &trans        &trans        &trans           &trans
       >;
     };
