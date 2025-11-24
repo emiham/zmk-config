@@ -8,7 +8,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
-#include <locale/keys_se.h>
+#include <locale/keys_sv.h>
 
 / {
   chosen { zmk,physical-layout = &default_layout; };
@@ -22,9 +22,9 @@
       display-name = "QWERTY";
 
       bindings = <
-        &kp TAB    &kp Q  &kp W  &kp E      &kp R  &kp T        &kp Y    &kp U  &kp I      &kp O      &kp P           &kp SE_A_RING
-        &kp LSHFT  &kp A  &kp S  &kp D      &kp F  &kp G        &kp H    &kp J  &kp K      &kp L      &kp SE_O_SLASH  &kp SE_AE
-        &kp LCTRL  &kp Z  &kp X  &kp C      &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT    &kp SE_MINUS    &kp ESC
+        &kp TAB    &kp Q  &kp W  &kp E      &kp R  &kp T        &kp Y    &kp U  &kp I      &kp O      &kp P           &kp SV_A_RING
+        &kp LSHFT  &kp A  &kp S  &kp D      &kp F  &kp G        &kp H    &kp J  &kp K      &kp L      &kp SV_O_UMLAUT &kp SV_A_UMLAUT
+        &kp LCTRL  &kp Z  &kp X  &kp C      &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT    &kp SV_MINUS    &kp ESC
                                  &kp LGUI   &mo 1  &kp SPACE    &kp RET  &mo 2  &kp LALT
       >;
     };
@@ -33,9 +33,9 @@
       display-name = "NUMBER";
 
       bindings = <
-        &trans  &trans  &kp N1  &kp N2  &kp N3  &kp SE_PLUS     &kp PSCRN    &kp C_VOL_DN      &kp C_VOL_UP  &trans     &trans  &kp SE_QUESTION
-        &trans  &trans  &kp N4  &kp N5  &kp N6  &kp N0          &kp LEFT     &kp DOWN          &kp UP        &kp RIGHT  &trans  &kp SE_APOS
-        &trans  &trans  &kp N7  &kp N8  &kp N9  &kp SE_MINUS    &none        &none             &kp COMMA     &kp DOT    &trans  &trans
+        &trans  &trans  &kp N1  &kp N2  &kp N3  &kp SV_PLUS     &kp PSCRN    &kp C_VOL_DN      &kp C_VOL_UP  &trans     &trans  &kp SV_QUESTION
+        &trans  &trans  &kp N4  &kp N5  &kp N6  &kp N0          &kp LEFT     &kp DOWN          &kp UP        &kp RIGHT  &trans  &kp SV_APOS
+        &trans  &trans  &kp N7  &kp N8  &kp N9  &kp SV_MINUS    &none        &none             &kp COMMA     &kp DOT    &trans  &trans
                                 &trans  &trans  &trans          &kp BSPC     &mo 4             &trans
       >;
     };
@@ -44,11 +44,10 @@
     raise_layer {
       display-name = "SYMBOL";
 
-      /* TODO Backslash doesn´t exist in zmk-locales */
       bindings = <
-        &trans  &trans    &kp SE_DQT  &kp SE_LT     &kp SE_GT     &kp SE_PIPE   &kp SE_CARET  &kp SE_LBRC      &kp SE_RBRC   &kp SE_DLLR  &kp SE_QMARK   &kp SE_QMARK
-        &trans  &trans    &kp SE_EXCL &kp SE_LBKT   &kp SE_RBKT   &kp SE_AMPS   &kp SE_FSLH   &kp SE_LPAR      &kp SE_RPAR   &kp SE_BSLH  &kp SE_BSLH    &kp SE_APOS
-        &trans  &trans    &kp SE_HASH &kp SE_QMARK  &kp SE_EQUAL  &kp SE_PRCNT  &kp SE_TILDE  &kp SE_AT_SIGN   &kp COMMA     &kp DOT      &kp SE_MINUS   &trans
+        &trans  &none     &kp SV_DQT  &kp SV_LT     &kp SV_GT     &kp SV_PIPE   &kp SV_CARET  &kp SV_LBRC      &kp SV_RBRC   &kp SV_DLLR  &kp SV_QMARK  &kp SV_QMARK
+        &trans  &none     &kp SV_EXCL &kp SV_LBKT   &kp SV_RBKT   &kp SV_AMPS   &kp SV_FSLH   &kp SV_LPAR      &kp SV_RPAR   &kp SV_BSLH  &none         &kp SV_APOS
+        &trans  &none     &kp SV_HASH &kp SV_QMARK  &kp SV_EQUAL  &kp SV_PRCNT  &kp SV_TILDE  &kp SV_AT_SIGN   &kp COMMA     &kp DOT      &kp SV_MINUS  &trans
                                       &trans        &trans        &trans        &trans        &trans           &trans
       >;
     };
