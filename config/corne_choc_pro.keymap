@@ -29,7 +29,7 @@
       compatible = "zmk,behavior-tap-dance";
       #binding-cells = <0>;
       tapping-term-ms = <200>;
-      bindings = <&cwt LSHFT 0>, <&cwt>;
+      bindings = <&cwt LSHFT 0>, <&kp CAPS>;
     };
   };
 
