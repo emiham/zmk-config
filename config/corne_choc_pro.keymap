@@ -20,7 +20,7 @@
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
       flavor = "hold-preferred";
-      hold-while-undecided;
+      retro-tap;
       tapping-term-ms = <200>;
       bindings = <&kp>, <&caps_word>;
       display-name = "Caps-Word-Tap";
