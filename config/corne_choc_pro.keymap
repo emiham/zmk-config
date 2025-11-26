@@ -15,6 +15,24 @@
 };
 
 / {
+  behaviors {
+    cwt: mod_tap {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      flavor = "hold-preferred";
+      tapping-term-ms = <200>;
+      bindings = <&kp LSHIFT>, <&caps_word>;
+      display-name = "Caps Word Tap";
+    };
+
+    td_cwt: tap_dance_mod_tap {
+      compatible = "zmk,behavior-tap-dance";
+      #binding-cells = <0>;
+      tapping-term-ms = <200>;
+      bindings = <&cwt>, <&kp LCTRL>;
+    };
+  };
+
   keymap {
     compatible = "zmk,keymap";
 
@@ -22,9 +40,9 @@
       display-name = "QWERTY";
 
       bindings = <
-        &kp TAB    &kp Q  &kp W  &kp E      &kp R  &kp T        &kp Y    &kp U  &kp I      &kp O      &kp P           &kp SV_A_RING
-        &kp LSHFT  &kp A  &kp S  &kp D      &kp F  &kp G        &kp H    &kp J  &kp K      &kp L      &kp SV_O_UMLAUT &kp SV_A_UMLAUT
-        &kp LCTRL  &kp Z  &kp X  &kp C      &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT    &kp SV_MINUS    &kp ESC
+        &kp TAB   &kp Q  &kp W  &kp E      &kp R  &kp T        &kp Y    &kp U  &kp I      &kp O      &kp P           &kp SV_A_RING
+        &td_cwt   &kp A  &kp S  &kp D      &kp F  &kp G        &kp H    &kp J  &kp K      &kp L      &kp SV_O_UMLAUT &kp SV_A_UMLAUT
+        &kp LCTRL &kp Z  &kp X  &kp C      &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT    &kp SV_MINUS    &kp ESC
                                  &kp LGUI   &mo 1  &kp SPACE    &kp RET  &mo 2  &kp LALT
       >;
     };
@@ -33,9 +51,9 @@
       display-name = "NUMBER";
 
       bindings = <
-        &trans  &trans  &kp N1  &kp N2  &kp N3  &kp SV_PLUS     &kp PSCRN    &kp C_VOL_DN      &kp C_VOL_UP  &trans     &trans  &kp SV_QUESTION
-        &trans  &trans  &kp N4  &kp N5  &kp N6  &kp N0          &kp LEFT     &kp DOWN          &kp UP        &kp RIGHT  &trans  &kp SV_APOS
-        &trans  &trans  &kp N7  &kp N8  &kp N9  &kp SV_MINUS    &none        &none             &kp COMMA     &kp DOT    &trans  &trans
+        &trans  &trans  &kp N1  &kp N2  &kp N3  &kp SV_PLUS     &kp PSCRN    &kp C_VOL_DN      &kp C_VOL_UP  &trans     &trans      &kp SV_QUESTION
+        &trans  &trans  &kp N4  &kp N5  &kp N6  &kp N0          &kp LEFT     &kp DOWN          &kp UP        &kp RIGHT  &kp SV_APOS &trans
+        &trans  &trans  &kp N7  &kp N8  &kp N9  &kp SV_MINUS    &none        &none             &kp COMMA     &kp DOT    &trans      &trans
                                 &trans  &trans  &trans          &kp BSPC     &mo 4             &trans
       >;
     };
@@ -46,7 +64,7 @@
 
       bindings = <
         &trans  &none     &kp SV_DQT  &kp SV_LT     &kp SV_GT     &kp SV_PIPE   &kp SV_CARET  &kp SV_LBRC      &kp SV_RBRC   &kp SV_DLLR  &kp SV_QMARK  &kp SV_QMARK
-        &trans  &none     &kp SV_EXCL &kp SV_LBKT   &kp SV_RBKT   &kp SV_AMPS   &kp SV_FSLH   &kp SV_LPAR      &kp SV_RPAR   &kp SV_BSLH  &none         &kp SV_APOS
+        &trans  &none     &kp SV_EXCL &kp SV_LBKT   &kp SV_RBKT   &kp SV_AMPS   &kp SV_FSLH   &kp SV_LPAR      &kp SV_RPAR   &kp SV_BSLH  &kp SV_APOS   &none
         &trans  &none     &kp SV_HASH &kp SV_QMARK  &kp SV_EQUAL  &kp SV_PRCNT  &kp SV_TILDE  &kp SV_AT_SIGN   &kp COMMA     &kp DOT      &kp SV_MINUS  &trans
                                       &trans        &trans        &trans        &trans        &trans           &trans
       >;
