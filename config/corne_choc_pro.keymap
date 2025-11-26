@@ -20,7 +20,7 @@
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
       flavor = "hold-preferred";
-      tapping-term-ms = <5000>;
+      tapping-term-ms = <200>;
       bindings = <&kp>, <&td_cwt>;
       display-name = "Caps-Word-Tap";
     };
@@ -28,7 +28,7 @@
     td_cwt: tap_dance_caps_word_tap {
       compatible = "zmk,behavior-tap-dance";
       #binding-cells = <0>;
-      tapping-term-ms = <200>;
+      tapping-term-ms = <400>;
       bindings = <&caps_word>, <&kp CAPS>;
     };
   };
