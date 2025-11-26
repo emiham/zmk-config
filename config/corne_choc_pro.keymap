@@ -18,7 +18,7 @@
   behaviors {
     cwt: mod_tap {
       compatible = "zmk,behavior-hold-tap";
-      #binding-cells = <0>;
+      #binding-cells = <2>;
       flavor = "hold-preferred";
       tapping-term-ms = <200>;
       bindings = <&kp>, <&caps_word>;
