@@ -63,7 +63,7 @@
       display-name = "SYMBOL";
 
       bindings = <
-        &trans  &none     &kp SV_DQT  &kp SV_LT     &kp SV_GT     &kp SV_PIPE   &kp SV_CARET  &kp SV_LBRC      &kp SV_RBRC   &kp SV_DLLR  &kp SV_QMARK  &kp SV_QMARK
+        &trans  &none     &kp SV_DQT  &kp SV_LT     &kp SV_GT     &kp SV_PIPE   &kp SV_CARET  &kp SV_LBRC      &kp SV_RBRC   &kp SV_DLLR  &kp SV_QMARK  &kp SV_ACUTE
         &trans  &none     &kp SV_EXCL &kp SV_LBKT   &kp SV_RBKT   &kp SV_AMPS   &kp SV_FSLH   &kp SV_LPAR      &kp SV_RPAR   &kp SV_BSLH  &kp SV_APOS   &none
         &trans  &none     &kp SV_HASH &kp SV_QMARK  &kp SV_EQUAL  &kp SV_PRCNT  &kp SV_TILDE  &kp SV_AT_SIGN   &kp COMMA     &kp DOT      &kp SV_MINUS  &trans
                                       &trans        &trans        &trans        &trans        &trans           &trans
