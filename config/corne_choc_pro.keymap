@@ -48,7 +48,7 @@
     shinv: shift_inverted {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <2>;
-      bindings = <LS(&kp)>, <&kp>;
+      bindings = <&kp LS()>, <&kp>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
     };
   };
