@@ -59,13 +59,14 @@
       mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
-    hld_clr: hold_clear {
+    bth: behavior_bth {
       compatible = "zmk,behavior-hold-tap";
-      #binding-cells = <0>;
-      flavor = "hold-preferred";
+      label = "BT_HOLD";
+      #binding-cells = <2>;
       tapping-term-ms = <5000>;
-      bindings = <&none>, <&none>;
-      display-name = "Hold to clear";
+      quick-tap-ms = <0>;
+      flavor = "tap-preferred";
+      bindings = <&bt>, <&none>;
     };
   };
 
@@ -111,7 +112,7 @@
       bindings = <
         &to 0  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4    &none           &none    &none      &none    &trans  &kp F24
         &none  &none         &none            &none         &none           &none           &none           &none    &none      &none    &none   &kp F23
-        &none  &none      &rgb_ug RGB_TOG  &sys_reset    &studio_unlock  &bootloader     &bootloader     &trans   &trans     &trans   &trans  &trans
+        &none  &bth BT_CLR   &rgb_ug RGB_TOG  &sys_reset    &studio_unlock  &bootloader     &bootloader     &trans   &trans     &trans   &trans  &trans
                                               &trans        &trans          &trans          &trans          &trans   &trans
       >;
     };
