@@ -59,14 +59,6 @@
       mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
-    hld_clr: hold_clear {
-      compatible = "zmk,behavior-hold-tap";
-      #binding-cells = <2>;
-      flavor = "hold-preferred";
-      tapping-term-ms = <5000>;
-      bindings = <&bt BT_CLR>, <&none>;
-      display-name = "Hold to clear";
-    };
   };
 
   keymap {
