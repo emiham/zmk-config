@@ -39,8 +39,9 @@
     ht: hold_tap {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
-      flavor = "hold-preferred";
-      tapping-term-ms = <0>;
+      flavor = "tap-preferred";
+      tapping-term-ms = <200>;
+      require-prior-idle-ms = <125>;
       bindings = <&kp>, <&kp>;
       display-name = "Hold-tap";
     };
