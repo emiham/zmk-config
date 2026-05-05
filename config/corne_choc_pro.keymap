@@ -35,6 +35,15 @@
       tapping-term-ms = <400>;
       bindings = <&kp LSHFT>, <&caps_word>, <&kp CAPS>;
     };
+
+    ht: hold_tap {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      flavor = "hold-preferred";
+      tapping-term-ms = <200>;
+      bindings = <&kp>, <&kp>;
+      display-name = "Hold/tap";
+    };
   };
 
   keymap {
@@ -45,7 +54,7 @@
 
       bindings = <
         &kp TAB       &kp Q   &kp W   &kp E      &kp R  &kp T        &kp Y    &kp U  &kp I      &kp O      &kp P           &kp SV_A_RING
-        &cwt LSHFT 0  &kp A   &kp S   &kp D      &kp F  &kp G        &kp H    &kp J  &kp K      &kp L      &kp SV_O_UMLAUT &kp SV_A_UMLAUT
+        &cwt LSHFT 0  &kp A   &kp S   &kp D      &kp F  &kp G        &kp H    &kp J  &kp K      &kp L      &kp SV_O_UMLAUT &ht RSHFT SV_A_UMLAUT
         &kp LCTRL     &kp Z   &kp X   &kp C      &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT    &kp SV_MINUS    &kp ESC
                                       &kp LGUI   &mo 1  &kp SPACE    &kp RET  &mo 2  &kp LALT
       >;
