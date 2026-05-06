@@ -54,7 +54,7 @@
       compatible = "zmk,behavior-tap-dance";
       #binding-cells = <0>;
       tapping-term-ms = <400>;
-      bindings = <&kp LSHFT>, <&tog ncw>, <&kp CAPS>;
+      bindings = <&kp LSHFT>, <&ncw>, <&kp CAPS>;
     };
 
     ht: hold_tap {
