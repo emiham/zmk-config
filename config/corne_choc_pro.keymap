@@ -62,7 +62,7 @@
       bindings = <&macro_tap &kp SPACE &tog CAPS_LAYER>;
     };
 
-    cw_return: caps_word_return {
+    cw_ret: caps_word_return {
       label = "caps_word_return";
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
