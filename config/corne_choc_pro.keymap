@@ -46,7 +46,7 @@
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
       bindings =
-        <&macro_press &tog CAPS_LAYER>,
+        <&macro_tap &tog CAPS_LAYER>,
         <&macro_press &kp LCTRL>,
         <&macro_pause_for_release>,
         <&macro_release &kp LCTRL>;
@@ -57,7 +57,7 @@
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
       bindings =
-        <&macro_press &tog CAPS_LAYER>,
+        <&macro_tap &tog CAPS_LAYER>,
         <&macro_press &kp LGUI>,
         <&macro_pause_for_release>,
         <&macro_release &kp LGUI>;
