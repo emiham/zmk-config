@@ -31,7 +31,7 @@
       label = "caps_word_caps_word";
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
-      bindings = <&macro_tap &caps_word &tog CAPS_LAYER>;
+      bindings = <&macro_tap &tog CAPS_LAYER>;
     };
 
     cw_tab: caps_word_tab {
@@ -124,6 +124,13 @@
       mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
+    dashinv: dash_inverted {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&kp LS(SV_MINUS)>, <&kp SV_MINUS>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
     bth: behavior_bth {
       compatible = "zmk,behavior-hold-tap";
       label = "BT_HOLD";
@@ -153,10 +160,10 @@
       display-name = "CAPS";
 
       bindings = <
-          &cw_tab        &kp Q   &kp W   &kp E      &kp R        &kp T           &kp Y     &kp U        &kp I       &kp O     &kp P             &kp SV_A_RING
-          &cwt LSHFT 0   &kp A   &kp S   &kp D      &kp F        &kp G           &kp H     &kp J        &kp K       &kp L     &kp SV_O_UMLAUT   &ht RSHFT SV_A_UMLAUT
-          &cw_ctrl       &kp Z   &kp X   &kp C      &kp V        &kp B           &kp N     &kp M        &kp COMMA   &dotinv   &kp SV_MINUS      &cw_esc
-                                         &cw_meta   &mo NUMBER   &cw_space       &cw_ret   &mo SYMBOL   &kp LALT
+          &cw_tab        &kp LS(Q)   &kp LS(W)   &kp LS(E)   &kp LS(R)    &kp LS(T)       &kp LS(Y)   &kp LS(U)    &kp LS(I)       &kp LS(O)     &kp LS(P)             &kp LS(SV_A_RING)
+          &cwt LSHFT 0   &kp LS(A)   &kp LS(S)   &kp LS(D)   &kp LS(F)    &kp LS(G)       &kp LS(H)   &kp LS(J)    &kp LS(K)       &kp LS(L)     &kp LS(SV_O_UMLAUT)   &ht RSHFT SV_A_UMLAUT
+          &cw_ctrl       &kp LS(Z)   &kp LS(X)   &kp LS(C)   &kp LS(V)    &kp LS(B)       &kp LS(N)   &kp LS(M)    &kp LS(COMMA)   &kp LS(DOT)   &dashinv              &cw_esc
+                                                 &cw_meta    &mo NUMBER   &cw_space       &cw_ret     &mo SYMBOL   &kp LALT
       >;
     };
 
