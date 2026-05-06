@@ -45,14 +45,22 @@
       label = "caps_word_ctrl";
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
-      bindings = <&macro_tap &kp LCTRL &tog CAPS_LAYER>;
+      bindings =
+        <&macro_press &tog CAPS_LAYER>,
+        <&macro_press &kp LCTRL>,
+        <&macro_pause_for_release>,
+        <&macro_release &kp LCTRL>;
     };
 
     cw_meta: caps_word_meta {
       label = "caps_word_meta";
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
-      bindings = <&macro_tap &kp LGUI &tog CAPS_LAYER>;
+      bindings =
+        <&macro_press &tog CAPS_LAYER>,
+        <&macro_press &kp LGUI>,
+        <&macro_pause_for_release>,
+        <&macro_release &kp LGUI>;
     };
 
     cw_space: caps_word_space {
