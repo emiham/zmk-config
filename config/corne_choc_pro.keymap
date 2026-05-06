@@ -28,17 +28,52 @@
 / {
   behaviors {
     ncw: new_caps_word {
-      label = "new_caps_word";
+      label = "caps_word_caps_word";
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
       bindings = <&macro_tap &caps_word &tog CAPS_LAYER>;
     };
 
+    cw_tab: caps_word_tab {
+      label = "caps_word_tab";
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&macro_tap &kp TAB &tog CAPS_LAYER>;
+    };
+
+    cw_ctrl: caps_word_ctrl {
+      label = "caps_word_ctrl";
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&macro_tap &kp LCTRL &tog CAPS_LAYER>;
+    };
+
+    cw_meta: caps_word_meta {
+      label = "caps_word_meta";
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&macro_tap &kp LGUI &tog CAPS_LAYER>;
+    };
+
     cw_space: caps_word_space {
-      label = "new_space";
+      label = "caps_word_space";
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
       bindings = <&macro_tap &kp SPACE &tog CAPS_LAYER>;
+    };
+
+    cw_return: caps_word_return {
+      label = "caps_word_return";
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&macro_tap &kp RET &tog CAPS_LAYER>;
+    };
+
+    cw_esc: caps_word_esc {
+      label = "caps_word_esc";
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&macro_tap &kp ESC &tog CAPS_LAYER>;
     };
 
     cwt: caps_word_tap {
@@ -110,10 +145,10 @@
       display-name = "CAPS";
 
       bindings = <
-          &kp TAB        &kp Q   &kp W   &kp E      &kp R        &kp T           &kp Y     &kp U        &kp I       &kp O     &kp P             &kp SV_A_RING
+          &cw_tab        &kp Q   &kp W   &kp E      &kp R        &kp T           &kp Y     &kp U        &kp I       &kp O     &kp P             &kp SV_A_RING
           &cwt LSHFT 0   &kp A   &kp S   &kp D      &kp F        &kp G           &kp H     &kp J        &kp K       &kp L     &kp SV_O_UMLAUT   &ht RSHFT SV_A_UMLAUT
-          &kp LCTRL      &kp Z   &kp X   &kp C      &kp V        &kp B           &kp N     &kp M        &kp COMMA   &kp DOT   &kp SV_MINUS      &kp ESC
-                                         &kp LGUI   &mo NUMBER   &cw_space       &kp RET   &mo SYMBOL   &kp LALT
+          &cw_ctrl       &kp Z   &kp X   &kp C      &kp V        &kp B           &kp N     &kp M        &kp COMMA   &dotinv   &kp SV_MINUS      &cw_esc
+                                         &cw_meta   &mo NUMBER   &cw_space       &cw_ret   &mo SYMBOL   &kp LALT
       >;
     };
 
