@@ -171,7 +171,7 @@
 
       bindings = <
           &cw_tab        &kp LS(Q)   &kp LS(W)   &kp LS(E)   &kp LS(R)    &kp LS(T)       &kp LS(Y)   &kp LS(U)    &kp LS(I)       &kp LS(O)   &kp LS(P)             &kp LS(SV_A_RING)
-          &cwt LSHFT 0   &kp LS(A)   &kp LS(S)   &kp LS(D)   &kp LS(F)    &kp LS(G)       &kp LS(H)   &kp LS(J)    &kp LS(K)       &kp LS(L)   &kp LS(SV_O_UMLAUT)   &ht RSHFT SV_A_UMLAUT
+          &cwt LSHFT 0   &kp LS(A)   &kp LS(S)   &kp LS(D)   &kp LS(F)    &kp LS(G)       &kp LS(H)   &kp LS(J)    &kp LS(K)       &kp LS(L)   &kp LS(SV_O_UMLAUT)   &ht RSHFT LS(SV_A_UMLAUT)
           &cw_ctrl       &kp LS(Z)   &kp LS(X)   &kp LS(C)   &kp LS(V)    &kp LS(B)       &kp LS(N)   &kp LS(M)    &kp LS(COMMA)   &kp DOT     &dashinv              &cw_esc
                                                  &cw_meta    &mo NUMBER   &cw_space       &cw_ret     &mo SYMBOL   &kp LALT
       >;
