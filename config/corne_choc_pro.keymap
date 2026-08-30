@@ -41,14 +41,22 @@
 };
 
 / {
-  combos {
-    compatible = "zmk,combos";
-    combo_e_acute {
-      timeout-ms = <50>;
-      key-positions = <3 4>;
-      bindings = <&kp SV_E_ACUTE>;
+    macros {
+        macro_e_acute: macro_e_acute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SV_ACUTE &kp E>;
+        };
     };
-  };
+
+    combos {
+        compatible = "zmk,combos";
+        combo_e_acute {
+            timeout-ms = <50>;
+            key-positions = <3 4>; /* E + R */
+            bindings = <&macro_e_acute>;
+        };
+    };
 };
 
 / {
