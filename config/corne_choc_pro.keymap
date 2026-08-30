@@ -146,7 +146,7 @@
       quick-tap-ms = <200>;
       tapping-term-ms = <200>;
       require-prior-idle-ms = <125>;
-      bindings = <&acinv>, <&codeblock>;
+      bindings = <&codeblock>, <&acinv>;
     };
 
     dotinv: dot_inverted {
