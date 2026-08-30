@@ -40,13 +40,15 @@
     };
 };
 
-/ combos {
+/ {
+  combos {
     compatible = "zmk,combos";
     combo_e_acute {
-        timeout-ms = <50>;
-        key-positions = <3 4>;
-        bindings = <&kp SV_E_ACUTE>;
+      timeout-ms = <50>;
+      key-positions = <3 4>;
+      bindings = <&kp SV_E_ACUTE>;
     };
+  };
 };
 
 / {
