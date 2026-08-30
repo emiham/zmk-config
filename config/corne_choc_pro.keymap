@@ -139,7 +139,7 @@
       bindings = <&macro_tap &kp LS(SV_ACUTE) &kp LS(SV_ACUTE) &kp LS(SV_ACUTE) &kp RET &kp RET &kp LS(SV_ACUTE) &kp LS(SV_ACUTE) &kp LS(SV_ACUTE) &kp UP>;
     };
 
-    acblock: hold_tap {
+    acblock: acblock {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <0>;
       flavor = "tap-preferred";
@@ -147,7 +147,6 @@
       tapping-term-ms = <200>;
       require-prior-idle-ms = <125>;
       bindings = <&acinv>, <&codeblock>;
-      display-name = "Hold-tap";
     };
 
     dotinv: dot_inverted {
