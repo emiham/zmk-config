@@ -133,6 +133,12 @@
       mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
+    codeblock: codeblock {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&macro_tap &kp LS(SV_ACUTE) &kp LS(SV_ACUTE) &kp LS(SV_ACUTE) &kp RET &kp RET &kp LS(SV_ACUTE) &kp LS(SV_ACUTE) &kp LS(SV_ACUTE)  &kp UP>;
+    };
+
     dotinv: dot_inverted {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
