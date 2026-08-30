@@ -40,6 +40,15 @@
     };
 };
 
+/ combos {
+    compatible = "zmk,combos";
+    combo_e_acute {
+        timeout-ms = <50>;
+        key-positions = <3 4>;
+        bindings = <&kp SV_E_ACUTE>;
+    };
+};
+
 / {
   behaviors {
     ncw: new_caps_word {
@@ -147,13 +156,6 @@
       tapping-term-ms = <1000>;
       require-prior-idle-ms = <125>;
       bindings = <&codeblock>, <&acinv>;
-    };
-
-    combo_é {
-      compatible = "zmk,combos";
-      timeout-ms = <50>;
-      key-positions = <3 4>;
-      bindings = <&kp SV_E_ACUTE>;
     };
 
     dotinv: dot_inverted {
